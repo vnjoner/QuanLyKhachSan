@@ -1,31 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-
 	<head>
+		<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
+		<script>
+			$(document).ready(function(){
+				$("#btnSearch").click(function(){
+				alert("Choose: " + $("#selDropdown").val());
+				});
+			});
+		</script>
 		<title>Tim Kiem Khach San</title>
 	</head>
 
 	<body>
-	   <div class="container">
-		<h1>Home</h1>
-		<div class="header">
-		<nav>
-			<a href="Home">Home</a>
-			<a href="SignIn">Sign In</a>
-			<a href="SignUp">Sign Up</a>
-		</nav>
+		<div class="container">
+			<h1>Home</h1>
+			<div class="header">
+				<ul>
+					<li><a href="Home">Home</a></li>
+					<li><a href="SignIn">Sign In</a></li>
+					<li><a href="SignUp">Sign Up</a></li>
+				</ul>
+			</div>
 		</div>
-	   </div>
-	   <div>
-		<label>Search by:<label>
-		<select name="dropdown">
-			<option value="">Prices</option>
-			<option value="">City</option>
-			<option value="">Rank, City</option>
-		</select>
-		<input type="button" name="btnSearch"  value="Search">
-	   </div>
 
-		
+		<div>
+			<label>Search by:<label>
+			<select name="dropdown" id="selDropdown">
+				<option value="Prices">Prices</option>
+				<option value="City">City</option>
+				<option value="Rank_City">Rank, City</option>
+			</select>
+			<button id="btnSearch">Search</button>
+		</div>
 	</body>
+</html>
 
